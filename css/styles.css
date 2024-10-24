@@ -1,0 +1,1279 @@
+/* LAYOUT PRINCIPAL */
+
+body {
+    background-color: #ffffff; /* Cor de fundo do corpo */
+    color: #333; /* Cor do texto */
+    font-family: Arial, sans-serif; /* Fonte do texto */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave para mudanças de cor */
+}
+
+.container {
+    background-color: white; /* Cor de fundo do container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil do container */
+    margin: 20px auto; /* Margem e centralização horizontal */
+    max-width: 1200px; /* Largura máxima do container */
+    padding: 20px; /* Preenchimento interno do container */
+}
+
+/* Modo escuro */
+body.dark-mode {
+    background-color: #333; /* Cor de fundo do corpo no modo escuro */
+    color: #ffffff; /* Cor do texto no modo escuro */
+}
+
+body.dark-mode .container {
+    background-color: #333; /* Cor de fundo do container no modo escuro */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Sombra mais clara no modo escuro */
+    color: white; /* Cor do texto no container no modo escuro */
+}
+
+/* Definindo cores padrão para o corpo no tema claro */
+body {
+    background-color: white; /* Cor de fundo do corpo no tema claro */
+    color: #333333; /* Cor padrão do texto no tema claro */
+}
+
+/* Estilos para seções no modo claro */
+
+.section {
+    padding: 40px 25px; /* Espaçamento interno da seção */
+    text-align: center; /* Centraliza o texto dentro da seção */
+    background-color: #ffffff; /* Cor de fundo clara */
+    color: #333333; /* Cor do texto para garantir contraste (um pouco mais escuro) */
+    font-family: 'Arial', sans-serif; /* Adiciona uma fonte, troque 'Arial' pela fonte que preferir */
+    font-size: 20px; /* Aumenta o tamanho do texto */
+    font-weight: 500; /* Engrossa um pouco as letras, ajuste o valor conforme necessário (normal: 400, bold: 700) */
+}
+
+.section h2 {
+    margin-bottom: 25px; /* Margem abaixo do título da seção */
+    margin-top: -10px; /* Margem negativa para subir o título */
+    color: #333333; /* Cor do texto no modo claro (um pouco mais escuro) */
+    font-size: 28px; /* Aumenta o tamanho do título */
+    font-weight: 700; /* Engrossa o título */
+}
+
+
+/* Estilos para seções no modo escuro */
+body.dark-mode .section {
+    background-color: #121212; /* Cor de fundo da seção no modo escuro (mais escura) */
+    color: #ffffff; /* Cor do texto na seção no modo escuro */
+    font-family: 'Arial', sans-serif; /* Adiciona a mesma fonte no modo escuro */
+    font-size: 20px; /* Mantém o tamanho do texto no modo escuro */
+    font-weight: 500; /* Engrossa um pouco as letras no modo escuro */
+}
+
+body.dark-mode .section h2 {
+    color: #ffffff; /* Cor do texto do título na seção no modo escuro */
+    font-size: 28px; /* Mantém o tamanho do título no modo escuro */
+    font-weight: 700; /* Mantém o título mais espesso no modo escuro */
+}
+
+
+body.dark-mode .historico,
+body.dark-mode .order {
+    background-color: #333; /* Fundo escuro para histórico e pedidos */
+    color: #fff; /* Texto claro */
+}
+
+body.dark-mode .order .price {
+    color: #7bff008a; /* Cor do preço inalterada */
+}
+
+body.dark-mode .search-container input {
+    color: #fff; /* Cor do texto no campo de busca */
+}
+
+body.dark-mode .search-container button {
+    color: #fff; /* Cor do texto no botão de busca */
+}
+
+footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: rgba(255, 255, 255, 0.459); /* Cor do texto do rodapé */
+    font-size: 14px; /* Tamanho da fonte do texto do rodapé */
+    margin-top: 1px; /* Margem acima do rodapé */
+    padding: 15px; /* Preenchimento interno do rodapé */
+    text-align: center; /* Centraliza o texto no rodapé */
+}
+
+/* Estilos para a lista de sugestões */
+.suggestions-list {
+    display: none; /* Oculta a lista por padrão */
+    position: absolute; /* Posiciona a lista em relação ao seu contêiner pai */
+    background-color: white; /* Cor de fundo da lista */
+    border: 1px solid #ddd; /* Borda da lista */
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+    margin: 0; /* Remove a margem padrão */
+    width: 100%; /* Largura total do contêiner pai */
+    max-height: 150px; /* Altura máxima da lista */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    z-index: 1000; /* Define a camada da lista para garantir que ela apareça sobre outros elementos */
+}
+
+.suggestions-list li {
+    padding: 10px; /* Espaçamento interno dos itens da lista */
+    cursor: pointer; /* Mostra o cursor como uma mão ao passar sobre os itens */
+    color: #333; /* Cor do texto dos itens da lista */
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse sobre o item */
+    color: #000; /* Cor do texto ao passar o mouse sobre o item */
+}
+
+/* Aaaadfawf dc daw fsdf sQS GSDF wq  sdf dadda */
+
+/* Estilos para o container de busca */
+.search-container {
+    max-width: 400px; /* Largura máxima do container de busca */
+    position: relative; /* Define o posicionamento relativo para os elementos internos */
+    width: 100%; /* Largura total do container */
+}
+
+.search-container input {
+    border: 1px solid #ddd; /* Borda do campo de busca */
+    border-radius: 10px; /* Arredondamento das bordas do campo de busca */
+    font-size: 16px; /* Tamanho da fonte do campo de busca */
+    padding: 10px; /* Espaçamento interno do campo de busca */
+    width: calc(100% - 100px); /* Largura do campo de busca ajustada pelo tamanho do botão */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.search-container button {
+    background-color: #ffffff00; /* Cor de fundo do botão de busca */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Arredondamento das bordas do botão */
+    color: rgb(255, 255, 255); /* Cor do texto do botão */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    font-weight: bold; /* Texto em negrito no botão */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    position: absolute; /* Posiciona o botão absolutamente dentro do container de busca */
+    right: 0; /* Alinha o botão à direita do container */
+    top: 0; /* Alinha o botão ao topo do container */
+}
+
+.search-container button:hover {
+    background-color: #ffffff00; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos para o modo escuro */
+.dark-mode .search-container input {
+    background-color: #ffffff; /* Fundo do campo de busca no modo escuro */
+    border: 1px solid #ffffff; /* Borda mais escura no modo escuro */
+    color: #e0e0e0; /* Texto claro no campo de busca no modo escuro */
+}
+
+.dark-mode .searbuttonch-container  {
+    background-color: #ffffff; /* Fundo do botão no modo escuro */
+    color: #e0e0e0; /* Texto claro no botão no modo escuro */
+}
+
+.dark-mode .search-container button:hover {
+    background-color: #ffffff; /* Fundo do botão ao passar o mouse no modo escuro */
+}
+
+/* Estilos para o carrossel imagem principal do início */
+.carousel {
+    max-width: 100%; /* Largura máxima do carrossel */
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa o contêiner do carrossel */
+    position: relative; /* Define o posicionamento relativo para o conteúdo interno */
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para a legenda do carrossel */
+    border-radius: 15px; /* Arredondamento das bordas da legenda */
+    color: white; /* Cor do texto da legenda */
+    padding: 20px; /* Espaçamento interno da legenda */
+    position: absolute; /* Posiciona a legenda absolutamente dentro do carrossel */
+    text-align: center; /* Centraliza o texto na legenda */
+    top: 50%; /* Alinha a legenda verticalmente ao centro */
+    left: 50%; /* Alinha a legenda horizontalmente ao centro */
+    transform: translate(-50%, -50%); /* Ajusta a posição da legenda para o centro exato */
+}
+
+.carousel img {
+    display: block; /* Remove espaços indesejados abaixo da imagem */
+    height: auto; /* Mantém a proporção da altura da imagem */
+    width: 100%; /* Ajusta a largura da imagem para preencher o container */
+}
+
+/* Estilos para o modo escuro */
+.dark-mode .carousel-caption {
+    background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente mais escuro para a legenda do carrossel no modo escuro */
+}
+
+
+/* ACABA AQUI */
+
+/* Estilos do Carrinho - Modo Escuro */
+.dark-mode .cart-item { /* CODIGO: (CONT-BLACK) */
+    background-color: #2c2c2c; /* Fundo escuro */
+    color: #f1f1f1; /* Texto claro */
+}
+
+.dark-mode .cart-item h2 {
+    color: #f1f1f1; /* Texto claro */
+}
+
+.dark-mode .empty-cart-message {
+    color: #f1f1f1; /* Texto claro */
+    background-color: #2c2c2c; /* Fundo escuro */
+}
+
+.dark-mode th {
+    background-color: #3a3a3a; /* Fundo escuro nos títulos */
+    color: #f1f1f1; /* Texto claro */
+}
+
+.dark-mode td {
+    color: #e0e0e0; /* Texto claro nas células */
+}
+
+.dark-mode .total {
+    color: #f1f1f1; /* Texto claro */
+}
+
+/* Estilos Globais - Aplicados em ambos os modos */
+.cart-item {
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra mais escura */
+}
+
+.cart-item h2 {
+    font-size: 24px;
+    color: #000000; /* Ou a cor que você preferir */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #444; /* Borda escura */
+}
+
+/* Botão Remover */
+.remove-button {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.remove-button:hover {
+    background-color: #c82333;
+}
+
+/* Botão Finalizar Compra */
+.checkout-button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+/* Formulário */
+form {
+    display: inline-block;
+}
+
+form button {
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cart-item {
+        padding: 15px;
+    }
+
+    th, td {
+        font-size: 14px;
+    }
+
+    .checkout-button {
+        font-size: 16px;
+    }
+}
+
+
+/* FINAL CARRINHO */
+
+/* Cabeçalho */
+header {
+    background-color: #0084ff ; /* Cor de fundo do cabeçalho mude no codigo la embaixo */
+    color: white; /* Cor do texto do cabeçalho */
+    padding: 20px; /* Espaçamento interno do cabeçalho */
+    text-align: center; /* Centraliza o texto no cabeçalho */
+}
+
+/* Navegação */
+nav {
+    background-color: #ffffff ; /* Fundo escuro e elegante */
+    color: #0044ff; /* Cor do texto */
+    display: flex; /* Flexbox para layout */
+    justify-content: space-between; /* Espaço entre elementos */
+    align-items: center; /* Alinhamento vertical */
+    padding: 10px 30px; /* Redução de espaçamento interno */
+    height: 60px; /* Altura fixa menor */
+    box-shadow: 0 4px 12px #1d1d1d93; /* Sombra mais proeminente */
+    position: sticky; /* Fixa no topo */
+    top: 0;
+    z-index: 10; /* Fica acima de outros elementos */
+    font-family: 'Poppins', sans-serif; /* Fonte mais elegante */
+    font-size: 16px; /* Tamanho da fonte dos links */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    transition: all 0.3s ease; /* Transição suave ao rolar */
+}
+
+/* Links de navegação */
+nav a {
+    color: #0044ff; /* Cor do texto dos links */
+    font-weight: 500; /* Texto mais leve e sofisticado */
+    margin: 0 15px; /* Espaçamento menor entre links */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transições para hover */
+    position: relative;
+    padding-bottom: 5px; /* Espaçamento para linha decorativa */
+}
+
+nav a:hover {
+    color: #0084ff; /* Cor diferenciada ao passar o mouse */
+    transform: translateY(-2px); /* Movimento sutil ao passar o mouse */
+}
+
+/* Linha decorativa */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* grossura da barra */
+    background: #00d9ff; /* Linha decorativa */
+    left: 50%;
+    bottom: 0;
+    border-radius: 25px; /* bordas redondas */
+    transition: width 0.3s ease, left 0.3s ease; /* movimento de abertura */
+}
+
+nav a:hover::after {
+    width: 100%; /* Expande a linha */
+    left: 0;
+}
+
+/* Estilo da barra de busca */
+nav .search-container {
+    display: flex; /* Flexbox para alinhamento */
+    align-items: center;
+    background-color: #ffffff; /* Cor de fundo da busca */
+    border-radius: 100px; /* Bordas arredondadas */
+    padding: 5px 15px; /* Ajustado para melhor proporção */
+    box-shadow: 0 1.5px 4px #00d6fca6; /* Sombra leve */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav .search-container:hover {
+    background-color: #ffffff; /* Fundo ao passar o mouse */
+    box-shadow: 0 3px 8px #00d6fc; /* Sombra ao passar o mouse */
+}
+
+nav .search-container input {
+    border: none; /* Remove borda */
+    outline: none; /* Remove contorno */
+    padding: 4.0px 10px; /* Ajuste no padding */
+    border-radius: 20px;
+    margin-right: 10px; /* Espaçamento entre elementos */
+    width: 345px; /* Largura padrão */
+    font-size: 14px; /* Tamanho de texto */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Transições */
+}
+
+nav .search-container input:focus {
+    width: 345px; /* Aumenta a largura ao focar */
+    background-color: #ffffff; /* Fundo claro no foco */
+    color: #000000; /* Cor do texto */
+}
+
+/* Botão de busca */
+nav .search-container button {
+    background-color: #ffffff00; /* Cor do botão de busca */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    border-radius: 100%; /* Botão circular */
+    padding: 10px 10px; /* Tamanho ajustado */
+    cursor: pointer; /* Cursor de botão */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0); /* Sombra leve */
+}
+
+
+
+/* Botão de alternância de tema */
+nav #theme-toggle {
+    background: none; /* Remove fundo */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Cursor de botão */
+}
+
+nav #theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0); /* Fundo ao passar o mouse */
+}
+
+/* Ícone de tema */
+nav #theme-icon {
+    width: 24px; /* Ajuste no tamanho do ícone */
+    height: 24px;
+}
+
+#theme-toggle {
+    display: flex; /* Exibe o botão como um flex container */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    background-color: #0000001f; /* Cor de fundo no modo claro */
+    color: white; /* Cor do texto no modo claro */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Arredondamento das bordas do botão */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transições suaves para cor de fundo e cor do texto */
+}
+
+#theme-toggle:hover {
+    background-color: #00000000; /* Cor de fundo ao passar o mouse sobre o botão de alternância de tema */
+}
+
+/* Estilo do ícone do botão de alternância de tema */
+#theme-toggle img {
+    margin-right: 16px; /* Espaço entre o ícone e o texto */
+    width: 10px; /* Largura do ícone */
+    height: 10px; /* Altura do ícone */
+    transition: transform 0.0s ease; /* Transição suave para transformações no ícone */
+}
+
+/* Ajuste do ícone no modo escuro (opcional) */
+.dark-mode #theme-toggle img {
+    filter: invert(1); /* Inverte as cores do ícone para combinar com o modo escuro, se necessário */
+}
+
+/* Estilo do botão no modo escuro */
+.dark-mode #theme-toggle {
+    background-color: rgba(0, 0, 0, 0); /* Cor de fundo no modo escuro */
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap; /* Quebra linha em telas pequenas */
+        padding: 10px 20px; /* Ajusta espaçamento */
+        height: auto; /* Altura automática */
+    }
+
+    nav a {
+        margin: 8px 0; /* Espaçamento vertical */
+        font-size: 14px; /* Tamanho reduzido para telas pequenas */
+    }
+
+    nav .search-container {
+        width: 100%; /* Largura total */
+        margin-top: 10px;
+    }
+
+    nav .search-container input {
+        width: 100%; /* Largura total */
+        font-size: 13px; /* Tamanho reduzido */
+    }
+
+    nav .search-container input:focus {
+        width: 100%; /* Mantém a largura ao focar */
+    }
+}
+
+/* Adicionar transições suaves ao abrir o menu lateral */
+nav a, nav .search-container button, nav #theme-toggle {
+    transition: all 0.4s ease-in-out; /* Transição para suavizar interações */
+}
+
+
+/* Fim da Navegação */
+
+/* Galerias de Produtos e Categorias */
+.product-gallery, .category-gallery {
+    max-width: 1200px; /* Largura máxima das galerias */
+    margin: 0 auto; /* Centraliza as galerias horizontalmente */
+    display: grid; /* Utiliza grid layout para as galerias */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Define o layout das colunas na grid */
+    gap: 20px; /* Espaçamento entre os itens na grid */
+}
+
+/* Estilos para Produtos e Categorias */
+.product, .category {
+    background-color: white; /* Cor de fundo dos itens */
+    border: 1px solid #ddd; /* Borda dos itens */
+    border-radius: 8px; /* Arredondamento das bordas dos itens */
+    padding: 15px; /* Espaçamento interno dos itens */
+    text-align: center; /* Centraliza o texto dentro dos itens */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves para transformações e sombra */
+}
+
+.product:hover, .category:hover {
+    transform: scale(1.05); /* Aumenta o tamanho dos itens ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao passar o mouse */
+}
+
+/* Imagens dos Produtos e Categorias */
+.product img, .category img {
+    width: 100%; /* Ajusta a largura das imagens para preencher o contêiner */
+    height: auto; /* Mantém a proporção da altura das imagens */
+    border-radius: 8px; /* Arredondamento das bordas das imagens */
+}
+
+/* Títulos dos Produtos e Categorias */
+.product h3, .category h3 {
+    color: #333; /* Cor do texto dos títulos */
+    font-size: 18px; /* Tamanho da fonte dos títulos */
+    margin: 10px 0; /* Margem acima e abaixo dos títulos */
+}
+
+/* Estilo do botão 'Comprar' */
+.buy-button {
+    display: inline-block; /* Exibe o botão como um bloco em linha */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #28a745; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    border-radius: 5px; /* Arredondamento das bordas do botão */
+    text-decoration: none; /* Remove sublinhado do texto do botão (caso seja um link) */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves para cor de fundo e transformação */
+}
+
+.buy-button:hover {
+    background-color: #218838; /* Cor de fundo ao passar o mouse sobre o botão */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.buy-button:active {
+    background-color: #1e7e34; /* Cor de fundo ao clicar no botão */
+    transform: scale(1); /* Volta ao tamanho normal ao clicar */
+}
+
+/* Limitar descrição a uma linha com "..." */
+.product p {
+    overflow: hidden; /* Oculta o texto que excede o espaço disponível */
+    white-space: nowrap; /* Impede que o texto quebre para a próxima linha */
+    text-overflow: ellipsis; /* Adiciona "..." ao final do texto que excede o espaço */
+}
+
+/* Estilos para o modo escuro */
+.dark-mode header {
+    background-color: #1e1e1e; /* Cor de fundo do cabeçalho no modo escuro */
+}
+
+.dark-mode nav {
+    background-color: #292929; /* Cor de fundo da barra de navegação no modo escuro */
+}
+
+.dark-mode .product, .dark-mode .category {
+    background-color: #1e1e1e; /* Cor de fundo dos produtos e categorias no modo escuro */
+    border-color: #333; /* Cor da borda dos produtos e categorias no modo escuro */
+}
+
+.dark-mode .product h3, .dark-mode .category h3 {
+    color: #e0e0e0; /* Cor dos títulos dos produtos e categorias no modo escuro */
+}
+
+.dark-mode .product p, .dark-mode .category p {
+    color: #e0e0e0; /* Cor das descrições dos produtos e categorias no modo escuro */
+}
+
+.dark-mode .product img, .dark-mode .category img {
+    filter: none; /* Garante que as imagens não sejam alteradas no modo escuro */
+}
+
+
+#theme-toggle:hover {
+    background-color: #00000000; /* Cor de fundo ao passar o mouse sobre o botão de alternância de tema */
+}
+
+/* Estilo do ícone do botão de alternância de tema */
+#theme-toggle img {
+    margin-right: 16px; /* Espaço entre o ícone e o texto */
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    transition: transform 0.0s ease; /* Transição suave para transformações no ícone */
+}
+
+/* Ajuste do ícone no modo escuro (opcional) */
+.dark-mode #theme-toggle img {
+    filter: invert(1); /* Inverte as cores do ícone para combinar com o modo escuro, se necessário */
+}
+
+/* Estilo do botão no modo escuro */
+.dark-mode #theme-toggle {
+    background-color: rgba(0, 0, 0, 0); /* Cor de fundo no modo escuro */
+}
+
+
+/* Estilo para o container de pedidos */
+.order {
+    background-color: white; /* Cor de fundo do container de pedidos */
+    border: 1px solid #ddd; /* Cor da borda do container de pedidos */
+    border-radius: 8px; /* Arredondamento das bordas do container de pedidos */
+    padding: 15px; /* Espaçamento interno do container de pedidos */
+    margin-bottom: 20px; /* Margem abaixo do container de pedidos */
+}
+
+.order h3 {
+    margin-top: 0; /* Remove a margem superior do título no container de pedidos */
+}
+
+.order p {
+    margin: 5px 0; /* Margem superior e inferior dos parágrafos no container de pedidos */
+}
+
+.order .price {
+    font-weight: bold; /* Texto em negrito para o preço */
+    color: #28a745; /* Cor do texto para o preço */
+}
+
+/* Estilo para o modo escuro */
+.dark-mode .order h3, .dark-mode .order p {
+    color: #e0e0e0; /* Cor do texto no modo escuro */
+}
+
+/* Estilo para o conteúdo principal */
+.content {
+    padding: 20px; /* Espaçamento interno do conteúdo */
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* ESTILO PARA REGISTRO */
+
+body.dark-mode .register-container {
+    background-color: #333; /* Cor de fundo para registro e login */
+    color: #f1f1f1; /* Cor do texto para registro e login */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra para registro e login */
+}
+
+body.dark-mode .register-container a {
+    color: #f3f3f3; /* Cor do texto dos links no modo escuro */
+}
+
+/* Estilo padrão para o container de registro */
+.register-container {
+    display: flex; /* Exibe o contêiner como um flex container */
+    flex-direction: column; /* Alinha os itens na direção da coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin: 20px auto; /* Margem vertical e centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno do container de registro */
+    background-color: white; /* Cor de fundo do container de registro */
+    border-radius: 8px; /* Arredondamento das bordas do container de registro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do container de registro */
+    max-width: 400px; /* Largura máxima do container de registro */
+    width: 100%; /* Largura total do container de registro */
+    text-align: center; /* Centraliza o texto dentro do container de registro */
+}
+
+/* Estilo para o título dentro do container de registro */
+.register-container h2 {
+    margin-bottom: 20px; /* Margem abaixo do título */
+}
+
+/* Estilo para os rótulos dentro do container de registro */
+.register-container label {
+    display: block; /* Exibe os rótulos como blocos */
+    margin-bottom: 5px; /* Margem abaixo dos rótulos */
+    font-size: 14px; /* Tamanho da fonte dos rótulos */
+    color: inherit; /* Usa a cor de texto do contêiner pai */
+}
+
+/* Estilo para os campos de input dentro do container de registro */
+.register-container input {
+    width: calc(100% - 20px); /* Ajusta a largura para levar em conta o padding */
+    padding: 10px; /* Espaçamento interno dos campos de input */
+    margin: 10px 0; /* Margem superior e inferior dos campos de input */
+    border: 1px solid #ddd; /* Cor da borda dos campos de input */
+    border-radius: 5px; /* Arredondamento das bordas dos campos de input */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Estilo para os botões dentro do container de registro */
+.register-container button {
+    width: calc(100% - 20px); /* Ajusta a largura para levar em conta o padding */
+    padding: 10px; /* Espaçamento interno dos botões */
+    background-color: #212222; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 5px; /* Arredondamento das bordas dos botões */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+    margin: 10px 0; /* Margem superior e inferior dos botões */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.register-container button:hover {
+    background-color: #000000; /* Cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilo para mensagens de erro dentro do container de registro */
+.register-container .error {
+    color: red; /* Cor do texto das mensagens de erro */
+    margin-top: 10px; /* Margem acima das mensagens de erro */
+}
+
+/* Estilo para links dentro do container de registro */
+.register-container a {
+    display: block; /* Exibe os links como blocos */
+    margin-top: 10px; /* Margem acima dos links */
+    color: #333; /* Cor do texto dos links no modo claro */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.register-container a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre os links */
+}
+
+/* Estilo para a pagina Ver mais do produtos */
+
+/* Estilo para a pagina Ver mais do produtos */
+body.dark-mode .product-specifications,
+body.dark-mode .product-seller {
+    background-color: #333; /* Cor de fundo para especificações, vendedor e login */
+    color: #f1f1f1; /* Cor do texto para especificações, vendedor e login */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra para especificações, vendedor e login */
+}
+
+body.dark-mode .product-specifications a,
+body.dark-mode .product-seller a {
+    color: #f3f3f3; /* Cor do texto dos links no modo escuro */
+}
+
+/* Estilo padrão para o container de especificações */
+.product-specifications, 
+.product-seller {
+    display: flex; /* Exibe o contêiner como um flex container */
+    flex-direction: column; /* Alinha os itens na direção da coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: flex-start; /* Alinha os itens à esquerda do container */
+    margin: 20px auto; /* Margem vertical e centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno do container */
+    background-color: white; /* Cor de fundo do container */
+    border-radius: 8px; /* Arredondamento das bordas do container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do container */
+    max-width: 400px; /* Largura máxima do container */
+    width: 100%; /* Largura total do container */
+    text-align: left; /* Alinha o texto à esquerda dentro do container */
+}
+
+/* Estilo para o título dentro dos containers */
+.product-specifications h3, 
+.product-seller h3 {
+    margin-bottom: 20px; /* Margem abaixo do título */
+}
+
+/* Estilo para os rótulos dentro dos containers */
+.product-specifications label, 
+.product-seller label {
+    display: block; /* Exibe os rótulos como blocos */
+    margin-bottom: 5px; /* Margem abaixo dos rótulos */
+    font-size: 14px; /* Tamanho da fonte dos rótulos */
+    color: inherit; /* Usa a cor de texto do contêiner pai */
+}
+
+/* Estilo para listas dentro dos containers */
+.product-specifications ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão da lista */
+}
+
+.product-specifications li {
+    margin: 5px 0; /* Margem entre os itens da lista */
+}
+
+/* Estilo para os campos de input e textarea dentro dos containers */
+.product-specifications input, 
+.product-specifications textarea, 
+.product-seller input, 
+.product-seller textarea {
+    width: calc(100% - 20px); /* Ajusta a largura para levar em conta o padding */
+    padding: 10px; /* Espaçamento interno dos campos de input */
+    margin: 10px 0; /* Margem superior e inferior dos campos de input */
+    border: 1px solid #ddd; /* Cor da borda dos campos de input */
+    border-radius: 5px; /* Arredondamento das bordas dos campos de input */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Estilo para os botões dentro dos containers */
+.product-specifications button, 
+.product-seller button {
+    width: calc(100% - 20px); /* Ajusta a largura para levar em conta o padding */
+    padding: 10px; /* Espaçamento interno dos botões */
+    background-color: #212222; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 5px; /* Arredondamento das bordas dos botões */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+    margin: 10px 0; /* Margem superior e inferior dos botões */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.product-specifications button:hover, 
+.product-seller button:hover {
+    background-color: #000000; /* Cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilo para links dentro dos containers */
+.product-specifications a, 
+.product-seller a {
+    display: block; /* Exibe os links como blocos */
+    margin-top: 10px; /* Margem acima dos links */
+    color: #333; /* Cor do texto dos links no modo claro */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.product-specifications a:hover, 
+.product-seller a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre os links */
+}
+
+
+
+/* Estilo para o botão de logout */
+.logout-button {
+    background-color: white; /* Cor de fundo do botão de logout */
+    color: white; /* Cor do texto do botão de logout */
+    border: none; /* Remove a borda padrão do botão de logout */
+    padding: 10px 20px; /* Espaçamento interno do botão de logout */
+    border-radius: 5px; /* Arredondamento das bordas do botão de logout */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão de logout */
+    font-size: 16px; /* Tamanho da fonte do botão de logout */
+    text-decoration: none; /* Remove o sublinhado do botão de logout */
+}
+
+.logout-button:hover {
+    background-color: #ff0000; /* Cor de fundo ao passar o mouse sobre o botão de logout */
+}
+
+body.dark-mode .login-container {
+    background-color: #333; /* Cor de fundo para registro e login */
+    color: #f1f1f1; /* Cor do texto para registro e login */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Sombra para registro e login */
+}
+
+body.dark-mode .login-container a {
+    color: #f3f3f3; /* Cor do texto dos links no modo escuro */
+}
+
+/* Estilo padrão para o container de login */
+.login-container {
+    display: flex; /* Exibe o contêiner como um flex container */
+    flex-direction: column; /* Alinha os itens na direção da coluna */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin: 20px auto; /* Margem vertical e centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno do container de login */
+    background-color: white; /* Cor de fundo do container de login */
+    border-radius: 8px; /* Arredondamento das bordas do container de login */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do container de login */
+    max-width: 400px; /* Largura máxima do container de login */
+    width: 100%; /* Largura total do container de login */
+    text-align: center; /* Centraliza o texto dentro do container de login */
+}
+
+/* Estilo para o título dentro do container de login */
+.login-container h2 {
+    margin-bottom: 20px; /* Margem abaixo do título */
+}
+
+/* Estilo para os rótulos dentro do container de login */
+.login-container label {
+    display: block; /* Exibe os rótulos como blocos */
+    margin-bottom: 5px; /* Margem abaixo dos rótulos */
+    font-size: 14px; /* Tamanho da fonte dos rótulos */
+    color: inherit; /* Usa a cor de texto do contêiner pai */
+}
+
+/* Estilo para os campos de input dentro do container de login */
+.login-container input {
+    width: calc(100% - 20px); /* Ajusta a largura para levar em conta o padding */
+    padding: 10px; /* Espaçamento interno dos campos de input */
+    margin: 10px 0; /* Margem superior e inferior dos campos de input */
+    border: 1px solid #ddd; /* Cor da borda dos campos de input */
+    border-radius: 5px; /* Arredondamento das bordas dos campos de input */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Estilo para os botões dentro do container de login */
+.login-container button {
+    width: calc(100% - 20px); /* Ajusta a largura para levar em conta o padding */
+    padding: 10px; /* Espaçamento interno dos botões */
+    background-color: #212222; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 5px; /* Arredondamento das bordas dos botões */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+    margin: 10px 0; /* Margem superior e inferior dos botões */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+.login-container button:hover {
+    background-color: #000000; /* Cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilo para mensagens de erro dentro do container de login */
+.login-container .error {
+    color: red; /* Cor do texto das mensagens de erro */
+    margin-top: 10px; /* Margem acima das mensagens de erro */
+}
+
+/* Estilo para links dentro do container de login */
+.login-container a {
+    display: block; /* Exibe os links como blocos */
+    margin-top: 10px; /* Margem acima dos links */
+    color: #333; /* Cor do texto dos links no modo claro */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.login-container a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse sobre os links */
+}
+
+
+/* Estilo para o botão de remover item */
+.remove-btn {
+    background-color: #ffffff; /* Cor de fundo do botão de remover item */
+    color: white; /* Cor do texto do botão de remover item */
+    border: none; /* Remove a borda padrão do botão de remover item */
+    padding: 5px 10px; /* Espaçamento interno do botão de remover item */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão de remover item */
+    border-radius: 3px; /* Arredondamento das bordas do botão de remover item */
+    margin-left: 20px; /* Margem à esquerda do botão de remover item */
+    flex-shrink: 0; /* Garante que o botão não seja redimensionado */
+}
+
+.remove-btn:hover {
+    background-color: #ff0000; /* Cor de fundo ao passar o mouse sobre o botão de remover item */
+}
+
+/* Estilo para a mensagem de "sem resultados" */
+#no-results {
+    display: none; /* Oculta a mensagem por padrão */
+    font-size: 16px; /* Tamanho da fonte da mensagem */
+    color: #ff0000; /* Cor do texto da mensagem - vermelho para chamar atenção */
+    text-align: center; /* Centraliza o texto da mensagem */
+    margin-top: 20px; /* Espaço acima da mensagem */
+    font-weight: bold; /* Torna o texto negrito */
+}
+/* Código Menu Lateral Geral */
+
+/* Definições Globais */
+:root {
+    --sidebar-width: 300px;
+    --sidebar-width-mobile: 200px;
+    --sidebar-bg-color: #1c1c1c;
+    --sidebar-text-color: #ffffff; /* CODIGO: (MN-LTRL) MUDA COR DOS NOMES: INICIO, PRODUTO E ETC... */
+    --sidebar-hover-bg-color: #333333;
+    --menu-button-color: #00ff15c5 ; /* CODIGO: (MN-LTRL) MUDA COR DO BOTAO DE ABRIR O MENU LATERAL */
+    --menu-button-size: 30px;
+    --close-button-size: 36px;
+    --sidebar-z-index: 1000;
+    --header-bg-color: #282828;
+    --header-text-color: #ffffff;
+    --font-family: 'Arial', sans-serif; /* Fonte padrão */
+}
+
+/* FOTO DE PERFIL DO MENU LATERAL */
+
+.perfil-container {
+    display: flex;
+    align-items: center;
+}
+
+.perfil-foto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px; /* Espaço entre a foto e o texto */
+}
+
+.perfil-texto {
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+/* FOTO DE PERFIL DO MENU LATERAL */
+
+body {
+    font-family: 'Poppins', sans-serif; /* Define a fonte padrão do corpo */
+}
+
+/* Variáveis CSS para cores e tamanhos */
+:root {
+    --bg-color: #333; /* Cor de fundo escura */
+    --text-color: #fff; /* Cor do texto em branco */
+    --hover-bg-color: rgba(255, 255, 255, 0.1); /* Cor de destaque ao passar o mouse */
+    --separator-color: rgba(255, 255, 255, 0.2); /* Cor do separador */
+    --special-text-color: #228B22; /* Cor verde para o texto especial */
+    --padding: 10px; /* Padding uniforme */
+    --border-radius: 4px; /* Raio de borda uniforme */
+    --transition-speed: 0.3s; /* Velocidade de transição uniforme */
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    background-color: var(--bg-color); /* Utiliza a variável para cor de fundo */
+}
+
+.menu-content {
+    flex-grow: 1; /* Permite que esta área cresça e ocupe o espaço disponível */
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--text-color); /* Utiliza a variável para cor do texto */
+    padding: var(--padding); /* Utiliza a variável para padding */
+    border-radius: var(--border-radius); /* Utiliza a variável para raio de borda */
+    transition: background-color var(--transition-speed); /* Efeito suave ao passar o mouse */
+}
+
+.sidebar a:hover {
+    background-color: var(--hover-bg-color); /* Utiliza a variável para cor de destaque */
+}
+
+/* Estilo para o separador */
+.sidebar hr {
+    border: 0;
+    border-top: 1px solid var(--separator-color); /* Utiliza a variável para cor do separador */
+    margin: 10px 0;
+}
+
+/* Estilo para o texto especial */
+.menu-especial {
+    text-align: center;
+    color: var(--special-text-color); /* Utiliza a variável para cor do texto especial */
+    font-size: 1.25em;
+    margin: 20px 0;
+    font-weight: 600;
+    letter-spacing: 0.5px; /* Aumenta o espaçamento entre letras */
+}
+
+/* Estilos adicionais para melhorar a acessibilidade */
+.sidebar a:focus {
+    outline: 2px solid var(--special-text-color); /* Contorno ao focar em links para acessibilidade */
+}
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+/* Estilo geral da página */
+body, html {
+    height: 100%;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Impede o overflow horizontal */
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    background-color: #0084ff ; /* CODIGO: (MN-LTRL) MUDA COR DE FUNDO ATRAS DA LOGO DO SITE NO TEMA CLARO */
+    padding: 15px;
+    text-align: center;
+    color: var(--header-text-color);
+    position: relative;
+    z-index: var(--sidebar-z-index) + 1;
+}
+
+/* Botão do menu no cabeçalho */
+.menu-toggle {
+    font-size: var(--menu-button-size);
+    color: var(--menu-button-color);
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Posicionado à direita */
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #0066ff; /* CODIGO: (MN-LTRL) MUDA COR AO PASSAR O MOUSE ENCIMA DO BOTAO DE ABRIR O MENU LATERAL */
+}
+
+/* Menu Lateral */
+aside#sidebar {
+    height: 100%;
+    width: var(--sidebar-width);
+    position: fixed;
+    top: 0;
+    right: calc(-1 * var(--sidebar-width));
+    background-color: var(--sidebar-bg-color);
+    color: var(--sidebar-text-color);
+    transition: right 0.4s ease;
+    z-index: var(--sidebar-z-index);
+    padding-top: 60px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+}
+
+/* Abrir menu */
+aside#sidebar.open {
+    right: 0; /* Mostra o menu lateral */
+}
+
+/* Links do menu lateral */
+aside#sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--sidebar-text-color);
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s; /* Transições para efeitos */
+}
+
+/* Efeitos de Hover nos Links */
+aside#sidebar a:hover {
+    background-color: var(--sidebar-hover-bg-color); /* Fundo no hover */
+    color: #00ff95; /* CODIGO: (MN-LTRL) MUDA COR DOS TEXTOS AO PASSAR O MOUSE ENCIMA DAS PALAVRAS NO MENU LATERAL COMO POR EXEMPLO: INICIO, PRODUTOS E ETC... */
+    transform: scale(1.10); /* Efeito de aumento no hover */
+}
+
+/* Botão de fechar o menu */
+.closebtn {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: var(--close-button-size);
+    background: none;
+    border: none;
+    color: #fcfcfc; /* CODIGO: (MN-LTRL) MUDA COR DO BOTAO DE FECHAR O MENU LATERAL */
+    cursor: pointer;
+}
+
+.closebtn:hover {
+    color: #ffa600; /* CODIGO: (MN-LTRL) MUDA COR DO BOTAO DE FECHAR O MENU LATERAL AO PASSAR O MOUSE */
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade aqui */
+    z-index: 1000;
+    display: none;
+}
+.overlay.active {
+    display: block;
+}
+.content {
+    padding: 20px;
+}
+.toggle-button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    margin-right: 0;
+    padding: 20px;
+    transition: margin-right 0.4s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    aside#sidebar {
+        width: var(--sidebar-width-mobile);
+        right: calc(-1 * var(--sidebar-width-mobile));
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+}
+
+/* Estilos personalizados para o título da página */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.flex i {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.flex .text-5xl {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 10;
+    margin-right: 0.625rem; /* 10px */
+    margin-left: 0.625rem; /* 10px */
+    font-family: 'Roboto', sans-serif;
+}

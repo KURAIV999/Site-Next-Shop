@@ -1,0 +1,134 @@
+/* Estilos base - Modo Claro */
+body {
+    background: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.product-management-container {
+    display: flex; /* Define como flex container */
+    flex-direction: column; /* Alinha os itens em coluna */
+    padding: 30px;
+    background: #ffffff; /* Fundo claro */
+    margin: 30px auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais leve */
+    max-width: 1200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center; /* Centraliza os itens no eixo horizontal */
+    gap: 10px; /* Espaço entre os elementos */
+}
+
+.product-management-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilo dos inputs e botões no modo claro */
+.product-management-container form input {
+    padding: 12px 15px;
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    border-right: none;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.product-management-container form button {
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #28a745, #218838);
+    border: none;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 1rem;
+    text-align: left;
+    background: #ffffff; /* Fundo claro */
+    border-radius: 12px;
+}
+
+.product-table thead {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: #ffffff;
+}
+
+.product-table th,
+.product-table td {
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+/* Estilo base do rodapé */
+footer {
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos para o Modo Escuro */
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .product-management-container {
+    background: #1c1c1c; /* Fundo mais escuro */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+}
+
+body.dark-mode .product-management-container h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .product-management-container form input {
+    border: 1px solid #666;
+    background-color: #282828;
+    color: #ffffff;
+}
+
+body.dark-mode .product-management-container form button {
+    background: linear-gradient(45deg, #28a745, #218838);
+}
+
+body.dark-mode .product-table {
+    background: #222; /* Fundo da tabela */
+}
+
+body.dark-mode .product-table th,
+body.dark-mode .product-table td {
+    border: 1px solid #444;
+    color: #ffffff;
+}
+
+body.dark-mode footer {
+    color: #ffffff;
+    background: #1e1e1e;
+    border-top: 1px solid #444;
+}
+
+body.dark-mode footer a {
+    color: #007bff;
+}

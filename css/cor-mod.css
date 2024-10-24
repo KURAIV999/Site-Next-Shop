@@ -1,0 +1,11 @@
+/* Estilização específica para o nome do usuário */
+.user-name {
+    color: green; /* Defina a cor verde para o texto */
+    font-weight: bold; /* Torne o texto em negrito */
+}
+
+/* Se o CSS acima não funcionar, use !important para forçar */
+.user-name {
+    color: green !important;
+    font-weight: bold;
+} 

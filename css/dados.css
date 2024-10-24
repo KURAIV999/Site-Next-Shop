@@ -1,0 +1,86 @@
+.payment-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: white; /* Define a cor de fundo como branca */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor do formulário */
+    border-radius: 8px;
+    color: #333; /* CODIGO: (PAY-FORM) Define a cor do texto como um cinza escuro */
+}
+
+.payment-form h2 {
+    margin-top: 0;
+    color: #007bff; /* CODIGO: (PAY-FORM) Define a cor do texto do cabeçalho como um azul específico */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+.payment-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.payment-form input {
+    width: 100%; 
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Define a cor da borda dos campos de entrada como um cinza claro */
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Centralizando o botão no contêiner */
+.button-container {
+    text-align: center; /* Centraliza o conteúdo do contêiner */
+}
+
+.payment-form button, .payment-form input.buy-button {
+    background-color: #228B22; /* CODIGO: (PAY-FORM) Define a cor de fundo do botão como azul */
+    color: white; /* Define a cor do texto do botão como branca */
+    padding: 12px 215px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto; /* Definido como auto para manter o tamanho natural */
+}
+
+.payment-form button:hover, .payment-form input.buy-button:hover {
+    background-color: #0056b3; /* CODIGO: (PAY-FORM) Define a cor de fundo do botão ao passar o mouse como um azul mais escuro */
+}
+
+/* Estilo para o modo escuro */
+.dark-mode .payment-form {
+    background-color: #2c2c2c; /* Define a cor de fundo do formulário no modo escuro como um cinza escuro */
+    color: #e0e0e0; /* Define a cor do texto no modo escuro como um cinza claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Aumenta a opacidade da sombra no modo escuro */
+}
+
+.dark-mode .payment-form h2 {
+    color: #66b3ff; /* CODIGO: (PAY-FORM) Define a cor do texto do cabeçalho no modo escuro como um azul claro */
+}
+
+.dark-mode .payment-form label {
+    color: #e0e0e0; /* Define a cor do texto dos rótulos no modo escuro como um cinza claro */
+}
+
+.dark-mode .payment-form input {
+    background-color: #333; /* Define a cor de fundo dos campos de entrada no modo escuro como um cinza muito escuro */
+    border: 1px solid #444; /* Define a cor da borda dos campos de entrada no modo escuro como um cinza escuro */
+    color: #e0e0e0; /* Define a cor do texto dos campos de entrada no modo escuro como um cinza claro */
+}
+
+.dark-mode .payment-form input::placeholder {
+    color: #bbb; /* Define a cor do texto de espaço reservado nos campos de entrada no modo escuro como um cinza claro */
+}
+
+/* Cor do botão no modo escuro */
+.dark-mode .payment-form button,
+.dark-mode .payment-form input.buy-button {
+    background-color: #228B22; /* CODIGO: (PAY-FORM) Define a cor de fundo do botão no modo escuro como verde */
+}
+
+.dark-mode .payment-form button:hover,
+.dark-mode .payment-form input.buy-button:hover {
+    background-color: #1e7b1e; /* CODIGO: (PAY-FORM) Define a cor de fundo do botão ao passar o mouse no modo escuro como um verde mais escuro */
+}

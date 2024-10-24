@@ -1,0 +1,102 @@
+// Verifique se a chave 'produto_id' existe antes de usá-la
+            if (isset($produto['produto_id'])) {
+                // Botão de adicionar ao carrinho com formulário POST
+                echo "<form action='../back/adicionar_carrinho.php' method='POST'>";
+                echo "<input type='hidden' name='produto_id' value='" . $produto['produto_id'] . "'>";
+                echo "<button class='buy-button'>Ver Produto</button>";
+                echo "</form>";
+            } else {
+                echo "<p>Produto ID não disponível.</p>";
+            }
+
+            echo "</div>";
+        }
+    } else {
+        echo "<p>Nenhum produto cadastrado no momento.</p>";
+    }
+
+    AVALIAÇÃO
+
+     <div class="product-reviews">
+                <h3>Avaliações</h3>
+                <div class="review">
+                    <p><strong>Cliente 1:</strong> Ótimo produto!</p>
+                    <p class="rating">⭐️⭐️⭐️⭐️⭐️</p>
+                </div>
+                <div class="review">
+                    <p><strong>Cliente 2:</strong> Boa qualidade, recomendo.</p>
+                    <p class="rating">⭐️⭐️⭐️⭐️</p>
+                </div>
+                <!-- Adicione mais avaliações conforme necessário -->
+            </div>
+
+            <div class="product-specifications">
+                <h3>Especificações</h3>
+                <ul>
+                    <li><strong>Marca:</strong> <?php echo htmlspecialchars($produto['marca']); ?></li>
+                    <li><strong>Modelo:</strong> <?php echo htmlspecialchars($produto['modelo']); ?></li>
+                    <li><strong>Cor:</strong> <?php echo htmlspecialchars($produto['cor']); ?></li>
+                    <li><strong>Dimensões:</strong> <?php echo htmlspecialchars($produto['dimensoes']); ?></li>
+                </ul>
+            </div>
+
+            <div class="product-seller">
+                <h3>Informações do Vendedor</h3>
+                <p><strong>Nome:</strong> <?php echo htmlspecialchars($produto['nome_vendedor']); ?></p>
+                <p><strong>Reputação:</strong> <?php echo htmlspecialchars($produto['reputacao_vendedor']); ?></p>
+                <p><strong>Localização:</strong> <?php echo htmlspecialchars($produto['localizacao_vendedor']); ?></p>
+            </div>
+
+
+
+
+
+            <?php
+session_start(); // Inicia a sessão para acessar as variáveis de sessão
+
+// Inclui a conexão com o banco de dados
+include '../back/conexao.php';
+
+// Verifica se o usuário está logado
+$usuarioLogado = false;
+$nomeUsuario = '';
+$acessoEspecial = false;
+
+// Caso o usuário esteja logado, recupera o nome da sessão e o nível de acesso
+if (isset($_SESSION['usuario_id'])) { // Use 'usuario_id' conforme o seu sistema de login
+    $usuarioLogado = true;
+    $nomeUsuario = $_SESSION['snome']; // Altere 'snome' para o nome correto da variável de sessão
+    $acessoEspecial = isset($_SESSION['acesso_especial']) && $_SESSION['acesso_especial'] == 1;
+}
+
+// Verifica se o parâmetro 'produto_id' foi passado na URL
+if (!isset($_GET['produto_id'])) {
+    die('Produto não encontrado.'); // Se não houver ID, exiba a mensagem
+}
+
+$produto_id = intval($_GET['produto_id']); // Converte para inteiro para segurança
+
+// Prepara a consulta SQL para pegar todas as informações do produto
+$sql = "SELECT nome, preco, imagem_principal, descricao, marca, modelo, cor, dimensoes, nome_vendedor, reputacao_vendedor, localizacao_vendedor FROM tblproduto WHERE produto_id = ?";
+$stmt = $conn->prepare($sql);
+
+if (!$stmt) {
+    die('Erro ao preparar a consulta: ' . $conn->error); // Mostra erro ao preparar a consulta
+}
+
+// Associa o parâmetro e executa a consulta
+$stmt->bind_param("i", $produto_id);
+$stmt->execute();
+$result = $stmt->get_result(); // Obtém o resultado
+
+// Verifica se o produto foi encontrado
+if ($result->num_rows > 0) {
+    $produto = $result->fetch_assoc(); // Pega os dados do produto
+} else {
+    die('Produto não encontrado.'); // Se não houver resultados
+}
+
+// Fecha a consulta e a conexão
+$stmt->close();
+$conn->close();
+?>

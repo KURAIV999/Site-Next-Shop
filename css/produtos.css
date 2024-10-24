@@ -1,0 +1,126 @@
+/* Variáveis para cores */
+:root {
+    --background-color-light: #f4f4f4;
+    --background-color-dark: #1e1e1e;
+    --text-color-light: #333;
+    --text-color-dark: #e0e0e0;
+    --price-color: #e60012;
+    --buy-button-background: #e60012; /* Vermelho */
+    --buy-button-hover: #c2000f; /* Vermelho escuro */
+}
+
+/* Reset básico para garantir consistência entre navegadores */
+body {
+    color: var(--text-color-light);
+    background-color: var(--background-color-light);
+}
+
+[data-theme="dark"] {
+    --background-color-light: #1e1e1e;
+    --text-color-light: #e0e0e0;
+}
+
+/* Estilos específicos para o modo escuro */
+[data-theme="dark"] .product-detail {
+    background: var(--background-color-dark); /* Cor de fundo escura */
+    color: var(--text-color-dark); /* Cor do texto clara */
+}
+
+.product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada para contraste */
+}
+
+.product-images {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.product-images .thumbnail {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover {
+    opacity: 0.7;
+}
+
+.product-info {
+    flex: 2;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #228B22; /* CODIGO: (INFPROD) Altere a cor para #228B22 */
+    margin: 1rem 0;
+}
+
+.product-specifications, .product-reviews, .product-seller {
+    margin: 2rem 0;
+}
+
+.product-specifications h3, .product-reviews h3, .product-seller h3 {
+    border-bottom: 2px solid #228B22; /* CODIGO: (INFPROD) Altere a cor para #228B22 */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.product-specifications ul {
+    list-style: none;
+}
+
+.product-specifications li {
+    margin-bottom: 0.5rem;
+}
+
+.product-reviews .review {
+    margin-bottom: 1rem;
+}
+
+.rating {
+    font-size: 1.2rem;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #FF0000; /* CODIGO: (INFPROD) Cor vermelha para o botão */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+    background: #8B0000; /* CODIGO: (INFPROD) Vermelho escuro ao passar o mouse */
+}
+

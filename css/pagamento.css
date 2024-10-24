@@ -1,0 +1,117 @@
+:root {
+    --bg-color-light: #fff; /* Cor de fundo no tema claro */
+    --bg-color-dark: #333; /* Cor de fundo no tema escuro */
+    --text-color-light: #333; /* Cor do texto no tema claro */
+    --text-color-dark: #f9f9f9; /* Cor do texto no tema escuro */
+    --box-shadow-light: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra no tema claro */
+    --box-shadow-dark: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra mais suave no tema escuro */
+    --payment-bg-light: #f9f9f9; /* Cor de fundo dos métodos de pagamento no tema claro */
+    --payment-bg-dark: #444; /* Cor de fundo dos métodos de pagamento no tema escuro */
+    --payment-text-color-light: #333; /* Cor do texto dos métodos de pagamento no tema claro */
+    --payment-text-color-dark: #f9f9f9; /* Cor do texto dos métodos de pagamento no tema escuro */
+}
+
+body.light-theme {
+    --bg-color: var(--bg-color-light);
+    --text-color: var(--text-color-light);
+    --box-shadow: var(--box-shadow-light);
+    --payment-bg: var(--payment-bg-light);
+    --payment-text-color: var(--payment-text-color-light);
+}
+
+body.dark-theme {
+    --bg-color: var(--bg-color-dark);
+    --text-color: var(--text-color-dark);
+    --box-shadow: var(--box-shadow-dark);
+    --payment-bg: var(--payment-bg-dark);
+    --payment-text-color: var(--payment-text-color-dark);
+}
+
+.payment-container {
+    max-width: 800px; /* Largura máxima da seção */
+    margin: 20px auto; /* Centraliza a seção na tela */
+    padding: 30px; /* Aumenta o espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    background-color: var(--bg-color); /* Cor de fundo */
+    box-shadow: var(--box-shadow); /* Sombra */
+    transition: box-shadow 0.3s ease; /* Transição suave para a sombra */
+}
+
+.payment-container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra mais forte ao passar o mouse */
+}
+
+.payment-container h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 30px; /* Espaçamento abaixo do título */
+    font-size: 28px; /* Aumenta o tamanho da fonte do título */
+    color: #007BFF; /* Cor azul para o título */
+    text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+}
+
+.payment-methods {
+    display: flex; /* Usar flexbox para alinhar itens */
+    justify-content: center; /* Centraliza itens horizontalmente */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço */
+}
+
+.payment-method {
+    display: flex; /* Usar flexbox para alinhar imagem e texto */
+    flex-direction: column; /* Colocar imagem em cima do texto */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    margin: 15px; /* Margem entre os itens */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformações */
+    padding: 15px; /* Adiciona espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas nos itens */
+    background-color: var(--payment-bg); /* Cor de fundo dos métodos de pagamento */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra leve no tema escuro */
+}
+
+.payment-method:hover {
+    transform: translateY(-5px); /* Levanta o item ao passar o mouse */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada no hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Muda a cor de fundo ao passar o mouse, leve transparência */
+}
+
+.payment-method img {
+    width: 100px; /* Tamanho das imagens */
+    height: auto; /* Manter a proporção da imagem */
+    margin-bottom: 8px; /* Espaço abaixo da imagem */
+    transition: transform 0.3s ease; /* Transição suave para a imagem */
+}
+
+.payment-method img:hover {
+    transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+.payment-method p {
+    font-weight: bold; /* Deixa o texto do nome mais destacado */
+    color: var(--payment-text-color); /* Cor do texto para melhor legibilidade */
+    margin-top: 5px; /* Espaço acima do texto */
+}
+
+.payment-container p {
+    text-align: center; /* Centraliza o texto de suporte */
+    margin-top: 20px; /* Espaçamento acima do texto de suporte */
+    color: var(--text-color); /* Cor do texto de suporte */
+    font-size: 16px; /* Tamanho da fonte do texto de suporte */
+}
+
+/* Animações de entrada para a seção */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.payment-container {
+    animation: fadeIn 0.5s ease-in-out; /* Animação de entrada */
+}
